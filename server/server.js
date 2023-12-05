@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const { google } = require('googleapis');
-
+const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -16,6 +16,7 @@ const documentId = '111457863149854949486';
 
 // Middleware to parse JSON
 app.use(express.json());
+app.use(express.static('public'));
 
 // Simple route for the root path
 app.get('/', (req, res) => {
@@ -24,10 +25,11 @@ app.get('/', (req, res) => {
 
 app.get('/chat', (req, res) => {
     // Serve your chat application HTML file here
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname,'public','index.html'));
 });
 
 app.post('/getChatResponse', async (req, res) => {
+    console.log('Received message from client:', req.body.message);
     const userMessage = req.body.message;
 
     // Make OpenAI API call

@@ -23,6 +23,7 @@ function displayMessage(sender, message) {
 
 async function sendToServer(message) {
     try {
+        console.log('Sending message to server:', message);
         const response = await fetch('/getChatResponse', {
             method: 'POST',
             headers: {
