@@ -1,0 +1,14 @@
+{
+    "name": "chatgpt-google-docs",
+    "version": "1.0.0",
+    "description": "ChatGPT integration with Google Docs",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "axios": "^0.24.0",
+      "googleapis": "^125.0.0"
+    }
+  }
