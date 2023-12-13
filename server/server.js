@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.get('/chat', (req, res) => {
     // Serve your chat application HTML file here
-    res.sendFile(path.join(__dirname,'public','index.html'));
+    res.sendFile(path.join(__dirname,'index.html'));
 });
 
 app.post('/getChatResponse', async (req, res) => {
