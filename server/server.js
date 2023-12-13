@@ -7,12 +7,12 @@ const port = 3000;
 
 // Your Google Cloud credentials
 const auth = new google.auth.GoogleAuth({
-    keyFile: 'path/to/your/google-credentials.json', // Path to the JSON file you downloaded from Google Cloud
+    keyFile: 'credentials/mh-chatgpt-ca71a761592e.json', // Path to the JSON file you downloaded from Google Cloud
     scopes: ['https://www.googleapis.com/auth/documents'],
 });
 
 const docs = google.docs({ version: 'v1', auth });
-const documentId = '111457863149854949486';
+const documentId = '1v0n4n1ultuWtARLeJzpFMQJjzc09FhfPFtukD6DwOcU';
 
 // Middleware to parse JSON
 app.use(express.json());
