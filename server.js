@@ -16,7 +16,9 @@ const documentId = '1v0n4n1ultuWtARLeJzpFMQJjzc09FhfPFtukD6DwOcU';
 
 // Middleware to parse JSON
 app.use(express.json());
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static(__dirname));
+
 
 // Simple route for the root path
 app.get('/', (req, res) => {
